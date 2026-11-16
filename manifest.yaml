@@ -1,8 +1,8 @@
 name: skill-memo
-version: 6.0.2
+version: 6.1.0
 type: skill
-description: Memo-Stil für Projekte in AIOS-Vaults (Memos und Specs, neutrale Fassung)
+description: Memo-Stil für Projekte in AIBOS-Vaults (Memos und Specs, neutrale Fassung)
 requires:
-  aios: ">=0.4,<0.7"
+  aibos: ">=0.7,<0.8"
 contents:
   skills: [memo]

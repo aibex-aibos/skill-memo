@@ -1,8 +1,8 @@
 ---
 name: memo
-version: 6.0.2
+version: 6.1.0
 description: >
-  Memo-Stil für Projekte in AIOS-Vaults: legt Memos und Specs im @Memo/- bzw. @Spec/-Ordner
+  Memo-Stil für Projekte in AIBOS-Vaults: legt Memos und Specs im @Memo/- bzw. @Spec/-Ordner
   des Projekts an — Nummernvergabe, Dateiname, Header-Block bzw. Spec-Frontmatter,
   Struktur, Formatierung, Obsidian-LaTeX; Memos sind ein Notizbuch und werden nie geändert.
   Verwenden, wenn ein Memo verlangt wird ("schreib ein Memo", "halte das fest",
@@ -52,7 +52,7 @@ Wird ein Memo verlangt („schreib ein Memo", „halte das fest", „Folge-Memo"
    | 2 | `@Memo/` fehlt, aber `<projekt>/@/` existiert | `@Memo/` ohne Rückfrage anlegen, dann Memo `01 …` |
    | 3 | weder `@Memo/` noch `@/` existiert | **kein** Memo anlegen, sondern nachfragen (Dialog unten) |
 
-   Das `@`-Verzeichnis kennzeichnet einen Ordner als Projekt. Nur dort legt der Skill eigenständig Struktur an. **Dialog im Fall 3:** mitteilen, dass der Ordner kein Projekt ist, und vorschlagen, ihn mit `/aios-init` zu initialisieren („Der Ordner `<projekt>` ist kein Projekt (kein `@`-Ordner). Deshalb lege ich kein Memo an. Soll ich ihn mit `/aios-init` als Projekt initialisieren?"). Bei Nein abbrechen, nichts anlegen. Bei Ja `/aios-init` ausführen und **als eigenen Schritt** fragen, ob jetzt das Memo erstellt werden soll; erst bei erneutem Ja greift Fall 1 oder 2. Die beiden Zustimmungen werden getrennt eingeholt.
+   Das `@`-Verzeichnis kennzeichnet einen Ordner als Projekt. Nur dort legt der Skill eigenständig Struktur an. **Dialog im Fall 3:** mitteilen, dass der Ordner kein Projekt ist, und vorschlagen, ihn mit `/aibos-init` zu initialisieren („Der Ordner `<projekt>` ist kein Projekt (kein `@`-Ordner). Deshalb lege ich kein Memo an. Soll ich ihn mit `/aibos-init` als Projekt initialisieren?"). Bei Nein abbrechen, nichts anlegen. Bei Ja `/aibos-init` ausführen und **als eigenen Schritt** fragen, ob jetzt das Memo erstellt werden soll; erst bei erneutem Ja greift Fall 1 oder 2. Die beiden Zustimmungen werden getrennt eingeholt.
 2. **Nummer vergeben:** die höchste vorhandene Nummer im Ordner plus 1, mindestens zweistellig mit führender Null (`01`, `02`, …), ab 100 dreistellig. Es zählen alle Dateien im Ordner, mit oder ohne `!!!`. Nummern werden nie neu vergeben oder umsortiert, Lücken bleiben. `@Memo/` und `@Spec/` haben je eine eigene Nummernfolge.
 3. **Dateiname bilden:** `NN Sprechender Titel.md`, mit `!!!` nur bei den unten genannten Kriterien.
 4. **Schreiben:** direkt in den Ordner, im hier beschriebenen Format. Bestehende Memos werden dabei nicht geändert (siehe *Memos und Specs*).
