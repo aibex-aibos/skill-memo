@@ -1,5 +1,5 @@
 name: skill-memo
-version: 6.1.0-rc1
+version: 6.1.0
 type: skill
 description: Memo-Stil für Projekte in AIBOS-Vaults (Memos und Specs, neutrale Fassung)
 requires:
